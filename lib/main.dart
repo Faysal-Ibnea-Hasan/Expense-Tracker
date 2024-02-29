@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
+      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 181, 213, 240),
+      ),
+      theme: ThemeData.light(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      home: Expense(),
+      home: const Expense(),
     ),
   );
 }
